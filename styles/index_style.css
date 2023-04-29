@@ -1,0 +1,96 @@
+
+body {
+    background-color: moccasin;
+}
+
+.container{
+    background-color: moccasin;
+    display: grid;
+    gap: 15px;
+    /* align-content: space-evenly; */
+    grid-template: 1fr 1fr 1fr 1fr / 20% 1fr 20%;
+    grid-template-areas: "logo_box search_recipe latest_histories"
+                         "navegador share_recipe latest_histories"
+                         "no_content latest_recipes latest_histories"
+                         "footer footer footer";
+}
+
+
+/* Caja que contiene al logo,
+ titulo de la página web y su motto */
+.logo_box {
+    grid-area: logo_box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_box .logo{
+    width: 50%;
+    height: auto;
+}
+
+.titulo_pagina > *{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.titulo_pagina {
+    margin-top: 0;
+}
+
+.motto{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* ************************************* */
+
+.navegador {
+    grid-area: navegador;
+    display: flex;
+    background-color: orange;
+    flex-direction: column;
+    row-gap: 5px;
+    
+
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.tab {
+    background-color: lightgreen;
+    text-align: center;
+    border: 2px black solid;
+    border-radius: 10px;
+    /* padding: 2px; */
+    width: 95%;
+    /* margin: 3px; */
+    
+}
+
+.no_content{
+    grid-area: no_content;
+}
+
+.search_recipe{
+    grid-area: search_recipe;
+}
+
+.share_recipe{
+    grid-area: share_recipe;
+}
+
+.latest_recipes{
+    grid-area: latest_recipes;
+}
+
+.latest_histories{
+    grid-area: latest_histories;
+}
+
