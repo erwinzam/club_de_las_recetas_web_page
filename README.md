@@ -5,7 +5,7 @@ Esta página web esta bajo desarrollo por:
 
 [Erwin Zambrana](https://github.com/erwinzam)
 
-[Nombre Apellido](<link github>)
+[Juan Martin Opacak](https://github.com/jopacak)
 
 [Nombre Apellido](<link github>)
 
