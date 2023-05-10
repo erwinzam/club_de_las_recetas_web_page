@@ -1,9 +1,10 @@
 .box_design{
-    background-color: orange;
+    background-color: #fff9f2;
     border-radius: 10px;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5px;
+    width: 90%;
+    padding: 10px;
     text-align: center;
 }
 

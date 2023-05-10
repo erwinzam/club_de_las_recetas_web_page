@@ -1,96 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body {
-    background-color: moccasin;
+*{
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    margin: 0;
+    background-color: rgb(236, 222, 157);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* .no_content{
+    grid-area: no_content;
+}
+
+.no_content_1{
+    grid-area: no_content_1;
+}
+
+.no_content_2{
+    grid-area: no_content_2;
+} */
+
 .container{
-    background-color: moccasin;
+    background-color: rgb(236, 222, 157);
     display: grid;
     gap: 15px;
     /* align-content: space-evenly; */
-    grid-template: 1fr 1fr 1fr 1fr / 20% 1fr 20%;
-    grid-template-areas: "logo_box search_recipe latest_histories"
-                         "navegador share_recipe latest_histories"
-                         "no_content latest_recipes latest_histories"
+    grid-template: 10.5vh auto auto auto 20vh / 20vw 55vw auto;
+    grid-template-areas:"navegador navegador navegador" 
+                        "left_side middle_area right_side"
+                         "left_side middle_area right_side"
+                         "left_side middle_area right_side"
                          "footer footer footer";
 }
+
+.left_side{
+    grid-area: left_side;
+    display: flex;
+    flex-direction: column;
+}
+
+.right_side{
+    grid-area: right_side;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Diseño barra de navegación */
+
+.navegador {
+    grid-area: navegador;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    /* background-color: orange; */
+    flex-direction: row;
+    row-gap: 0;
+    
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    background-color: rgb(236, 222, 157);
+    color: #67579b;
+
+    border-style: none none outset none;
+}
+
+.navegador a:visited{
+    color: inherit;
+}
+
+.navegador a{
+    margin: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.navegador a:hover{
+    color: #67579b;
+}
+
+
+.tab {
+    text-align: center;
+    
+    text-decoration: none;
+    
+}
+
+.tab:hover{
+    background-color: white;
+    text-decoration: underline;
+}
+
+
 
 
 /* Caja que contiene al logo,
  titulo de la página web y su motto */
-.logo_box {
+ .logo_box {
+    flex-grow: 1;
     grid-area: logo_box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 8vh;
+    display: grid;
+    grid-template: 70% 30% / 20% 80%;
+    grid-template-areas: "logo titulo_pagina"
+                         "logo motto";
+    
+    justify-content: start;
     align-items: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-left: 5px;
+    gap: 0;
+    /* flex-wrap: wrap; */
 }
 
-.logo_box .logo{
-    width: 50%;
-    height: auto;
+.logo_box a{
+    grid-area: logo;
+    flex-grow: 0;
+    padding: 0;
+    
 }
 
-.titulo_pagina > *{
-    padding-top: 0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
+.logo{
+    height: 12vh;
 }
+
+
 .titulo_pagina {
+    /* width: auto; */
+    grid-area: titulo_pagina;
     margin-top: 0;
+    font-weight: bold;
+    font-size: x-large;
 }
 
 .motto{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    grid-area: motto;
+    
+}
+
+.motto > *{
     text-align: center;
+    margin-top: 0px;
+    font-size: small;
 }
 /* ************************************* */
 
-.navegador {
-    grid-area: navegador;
+
+
+
+
+
+.middle_area{
+    grid-area: middle_area;
+    background-color: #FAF9FB;
     display: flex;
-    background-color: orange;
     flex-direction: column;
-    row-gap: 5px;
-    
-
-    border-radius: 10px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
+    row-gap: 10px;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    padding: 10px;
+    /* width: 50%; */
 }
 
-.tab {
-    background-color: lightgreen;
+.middle_area > *{
+    background-color: white;
+    border-radius: 10px;
+    /* width: 90%; */
+}
+
+
+
+
+
+.latest_histories_section{
+    display: flex;
+    flex-direction: column;
+    background-color: crimson;
+    
+
+}
+
+.header_latest_histories_section{
     text-align: center;
-    border: 2px black solid;
+}
+
+.latest_histories_boxes{
+    display: flex;
+    flex-direction: row;
+    background-color: aqua;
+    padding: 20px;
+    gap: 10px;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.history_box{
+
+    display: flex;
+    flex-direction: column;
+    background-color: chocolate;
+    color: black;
+    width: 47%;
+    /* padding: 10px; */
+
+    border: 3px;
+    
     border-radius: 10px;
-    /* padding: 2px; */
-    width: 95%;
-    /* margin: 3px; */
+    overflow: hidden;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px;
     
 }
 
-.no_content{
-    grid-area: no_content;
+.history_box:hover{
+    color:blue;
+    text-decoration: underline;
+
 }
 
-.search_recipe{
-    grid-area: search_recipe;
+.history_box:hover img{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
 }
 
-.share_recipe{
-    grid-area: share_recipe;
+.history_box img{
+    height: 80%;
+    width: 90%;
 }
+
+.history_box > *{
+    text-align: center;
+}
+
+.history_title{
+    padding-top: 10px;
+}
+
+
+
 
 .latest_recipes{
     grid-area: latest_recipes;
+    display: flex;
+    flex-direction: column;
+    
+    background-color: white;
+    
+    align-items: center;
+    justify-content: center;
+
+    row-gap: 10px;
 }
 
-.latest_histories{
-    grid-area: latest_histories;
+
+
+/***************************************/
+
+
+/* Diseño caja que muestra una receta */
+
+.recipe_box{
+    display: flex;
+    flex-direction: column;
+    background-color: coral;
+    color: black;
+    
+    align-items: center;
+    justify-content: center;
+    
+    width: 90%;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    padding: 5px;
+    
 }
+
+.recipe_box img{
+    height: 80%;
+    width: 90%;
+}
+
+.recipe_box:hover{
+    color:blue;
+    text-decoration: underline;
+
+}
+
+.recipe_box:hover img{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+
+.recipe_title{
+    padding-top: 10px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
+
+/**********************************/
+
+
+
+
 
