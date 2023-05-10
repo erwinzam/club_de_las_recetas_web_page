@@ -87,10 +87,15 @@ a{
 
 .navegador a{
     margin: 0px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    /* padding-bottom: 10px;
+    padding-top: 10px; */
     flex-grow: 1;
+    height: 100%;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navegador a:hover{
@@ -99,8 +104,6 @@ a{
 
 
 .tab {
-    text-align: center;
-    
     text-decoration: none;
     
 }
