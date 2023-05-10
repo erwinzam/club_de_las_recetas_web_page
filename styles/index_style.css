@@ -33,17 +33,17 @@ a{
     /* align-content: space-evenly; */
     grid-template: 10.5vh auto auto auto 20vh / 20vw 55vw auto;
     grid-template-areas:"navegador navegador navegador" 
-                        "left_side middle_area right_side"
-                         "left_side middle_area right_side"
-                         "left_side middle_area right_side"
+                        "middle_area middle_area right_side"
+                         "middle_area middle_area right_side"
+                         "middle_area middle_area right_side"
                          "footer footer footer";
 }
 
-.left_side{
+/* .left_side{
     grid-area: left_side;
     display: flex;
     flex-direction: column;
-}
+} */
 
 .right_side{
     grid-area: right_side;
@@ -116,7 +116,8 @@ a{
 /* Caja que contiene al logo,
  titulo de la página web y su motto */
  .logo_box {
-    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
     grid-area: logo_box;
     height: 8vh;
     display: grid;
@@ -126,42 +127,58 @@ a{
     
     justify-content: start;
     align-items: center;
-    padding-top: 0.5vh;
-    padding-bottom: 0.5vh;
-    padding-left: 5px;
+    /* padding-top: 0.5vh;
+    padding-bottom: 0.5vh; */
+    padding-left: 10px;
     gap: 0;
     /* flex-wrap: wrap; */
 }
 
-.logo_box a{
-    grid-area: logo;
-    flex-grow: 0;
+.logo_box > a{
     padding: 0;
-    
 }
 
 .logo{
-    height: 12vh;
+    grid-area: logo;
+    padding: 0;
+    /* object-fit: cover; */
+    /* width: 100%;
+    max-height: 100%; */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
 }
 
 
 .titulo_pagina {
     /* width: auto; */
+    /* width: 100%; */
+    /* height: 100%; */
     grid-area: titulo_pagina;
     margin-top: 0;
     font-weight: bold;
-    font-size: x-large;
+    font-size: 4vh;
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
 }
 
 .motto{
     grid-area: motto;
+    box-sizing: border-box;
     
 }
 
 .motto > *{
     text-align: center;
     margin-top: 0px;
-    font-size: small;
+    font-size: 1.5vh;
 }
 /* ************************************* */
 
@@ -172,6 +189,7 @@ a{
 
 .middle_area{
     grid-area: middle_area;
+    margin-left: 10px;
     background-color: #FAF9FB;
     display: flex;
     flex-direction: column;
