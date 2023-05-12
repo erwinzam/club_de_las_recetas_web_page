@@ -31,7 +31,7 @@ a{
     display: grid;
     gap: 15px;
     /* align-content: space-evenly; */
-    grid-template: 10.5vh auto auto auto 20vh / 20vw 55vw auto;
+    grid-template: 10.5vh 23.167vh 23.167vh 23.167vh 20vh / 20vw 55vw auto;
     grid-template-areas:"navegador navegador navegador" 
                         "middle_area middle_area right_side"
                          "middle_area middle_area right_side"
@@ -51,6 +51,7 @@ a{
     flex-direction: column;
     padding: 0;
     margin: 0;
+    height: 100%;
 
     margin-right: 10px;
     align-items: center;
@@ -66,13 +67,13 @@ a{
     position: sticky;
     top: 0px;
     left: 0px;
-    display: flex;
-    /* background-color: orange; */
-    flex-direction: row;
+    display: grid;
+    grid-template: 100% / 310px calc(100% - 310px);
+    grid-template-areas: "logo_box nav_tabs";
     row-gap: 0;
     
 
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 0px;
     background-color: rgb(236, 222, 157);
@@ -81,31 +82,43 @@ a{
     border-style: none none outset none;
 }
 
-.navegador a:visited{
+.nav_tabs{
+    grid-area: nav_tabs;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.nav_tabs a:visited{
     color: inherit;
 }
 
-.navegador a{
+.nav_tabs a{
+    height: 100%;
+}
+
+.nav_tabs a:hover{
+    color: #67579b;
+}
+
+
+.tab {
+
     margin: 0px;
     /* padding-bottom: 10px;
     padding-top: 10px; */
-    flex-grow: 1;
+    
     height: 100%;
     overflow: hidden;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.navegador a:hover{
-    color: #67579b;
-}
-
-
-.tab {
-    text-decoration: none;
-    
+    flex: 1 0 auto;
+    text-decoration: none; 
 }
 
 .tab:hover{
@@ -119,10 +132,9 @@ a{
 /* Caja que contiene al logo,
  titulo de la página web y su motto */
  .logo_box {
-    flex-shrink: 1;
-    flex-basis: 300px;
+    /* flex: 0 0 290px; */
     grid-area: logo_box;
-    height: 8vh;
+    height: 100%;
     display: grid;
     grid-template: 70% 30% / 20% 80%;
     grid-template-areas: "logo titulo_pagina"
@@ -133,7 +145,7 @@ a{
     /* padding-top: 0.5vh;
     padding-bottom: 0.5vh; */
     padding-left: 10px;
-    gap: 0;
+    column-gap: 10px;
     /* flex-wrap: wrap; */
 }
 
@@ -148,12 +160,19 @@ a{
     /* width: 100%;
     max-height: 100%; */
     height: 100%;
+    width: 100%;
+    
     box-sizing: border-box;
+
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .logo img{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     object-fit: cover;
     position: relative;
@@ -192,6 +211,7 @@ a{
 
 .middle_area{
     grid-area: middle_area;
+    
     margin-left: 10px;
     background-color: #FAF9FB;
     display: flex;
@@ -215,6 +235,7 @@ a{
 
 .latest_histories_section{
     display: flex;
+    height: 100%;
     flex-direction: column;
     background-color: crimson;
     
@@ -222,10 +243,13 @@ a{
 }
 
 .header_latest_histories_section{
+    height: 100%;
     text-align: center;
 }
 
 .latest_histories_boxes{
+    /* height: 100%; */
+    flex: 0 0 20%;
     display: flex;
     flex-direction: row;
     background-color: aqua;
@@ -237,7 +261,7 @@ a{
 }
 
 .history_box{
-
+    /* height: 100%; */
     display: flex;
     flex-direction: column;
     background-color: chocolate;
@@ -288,6 +312,8 @@ a{
     grid-area: latest_recipes;
     display: flex;
     flex-direction: column;
+
+    height: 100%;
     
     background-color: white;
     
@@ -349,6 +375,52 @@ a{
 /**********************************/
 
 
+
+
+
+@media only screen and (max-width: 768px){
+    .container{
+        grid-template-areas:"navegador navegador navegador"
+                            "middle_area middle_area middle_area"
+                            "right_side right_side right_side"
+                            "footer footer footer"
+    }
+
+    .navegador{
+        display: grid;
+        grid-template: 60% 40% / 100%;
+        grid-template-areas: "logo_box"
+                             "nav_tabs";
+        
+    }
+
+    .logo_box{
+        column-gap: 0;
+        grid-template-columns: 46.11px 223.73px;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .logo{
+        justify-content: end;
+        width: auto;
+    }
+
+    .tab *{
+        font-size: x-small;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px){
+    .container{
+        grid-template-areas:"navegador navegador navegador"
+                            "middle_area middle_area middle_area"
+                            "right_side right_side right_side"
+                            "footer footer footer"
+    }
+}
 
 
 
