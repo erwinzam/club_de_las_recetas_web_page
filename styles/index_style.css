@@ -43,17 +43,22 @@ a{
     /* align-content: space-evenly; */
     grid-template: 10.5vh auto auto auto 20vh / 20% 55% 25%;
     grid-template-areas:"navegador navegador navegador" 
-                        "middle_area middle_area right_side"
-                         "middle_area middle_area right_side"
-                         "middle_area middle_area right_side"
+                        "middle_area middle_area middle_area"
+                         "middle_area middle_area middle_area"
+                         "middle_area middle_area middle_area"
                          "footer footer footer";
 }
 
-/* .left_side{
-    grid-area: left_side;
-    display: flex;
-    flex-direction: column;
-} */
+
+.middle_area{
+    grid-area: middle_area;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-areas: "left_side right_side";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 
 .right_side{
     grid-area: right_side;
@@ -64,9 +69,10 @@ a{
     box-sizing: border-box;
     /* height: 100%;
     width: 100%; */
-    width: 100%;
+    /* width: 100%; */
+    /* margin-right: 300px; */
 
-    margin-right: 10px;
+    /* margin-right: 10px; */
     /* align-items: center;
     justify-content: center; */
 }
@@ -222,8 +228,8 @@ a{
 
 
 
-.middle_area{
-    grid-area: middle_area;
+.left_side{
+    grid-area: left_side;
     /* height: 100%; */
     /* width: 100%; */
     
@@ -234,7 +240,7 @@ a{
     /* row-gap: 10px; */
     /* justify-content: flex-start; */
     /* align-items: center; */
-    padding: 10px;
+    /* padding: 10px; */
     /* width: 50%; */
     box-sizing: border-box;
 }
@@ -457,9 +463,16 @@ a{
         grid-template: 10.5vh auto auto 20vh / 20% 55% 25%;
         grid-template-areas:"navegador navegador navegador"
                             "middle_area middle_area middle_area"
-                            "right_side right_side right_side"
+                            "middle_area middle_area middle_area"
                             "footer footer footer";
         column-gap: 0;
+    }
+
+    .middle_area{
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        grid-template-areas: "left_side"
+                             "right_side";
     }
 
     .navegador{
