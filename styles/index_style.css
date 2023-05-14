@@ -8,6 +8,11 @@
 body {
     margin: 0;
     background-color: rgb(236, 222, 157);
+    /* width: 100vw; */
+}
+
+body .container{
+    width: inherit;
 }
 
 a{
@@ -28,10 +33,11 @@ a{
 
 .container{
     background-color: rgb(236, 222, 157);
+    
     display: grid;
-    gap: 15px;
+    /* gap: 15px; */
     /* align-content: space-evenly; */
-    grid-template: 10.5vh 23.167vh 23.167vh 23.167vh 20vh / 20vw 55vw auto;
+    grid-template: 10.5vh auto auto auto auto / 20% 55% 25%;
     grid-template-areas:"navegador navegador navegador" 
                         "middle_area middle_area right_side"
                          "middle_area middle_area right_side"
@@ -49,13 +55,16 @@ a{
     grid-area: right_side;
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
-    height: 100%;
+    /* padding: 0;
+    margin: 0; */
+    box-sizing: border-box;
+    /* height: 100%;
+    width: 100%; */
+    width: 100%;
 
-    margin-right: 10px;
-    align-items: center;
-    justify-content: center;
+    /* margin-right: 10px; */
+    /* align-items: center;
+    justify-content: center; */
 }
 
 
@@ -145,7 +154,7 @@ a{
     /* padding-top: 0.5vh;
     padding-bottom: 0.5vh; */
     padding-left: 10px;
-    column-gap: 10px;
+    /* column-gap: 10px; */
     /* flex-wrap: wrap; */
 }
 
@@ -211,16 +220,19 @@ a{
 
 .middle_area{
     grid-area: middle_area;
+    /* height: 100%; */
+    /* width: 100%; */
     
-    margin-left: 10px;
+    /* margin-left: 10px; */
     background-color: #FAF9FB;
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    /* row-gap: 10px; */
     /* justify-content: flex-start; */
     /* align-items: center; */
-    padding: 10px;
+    /* padding: 10px; */
     /* width: 50%; */
+    box-sizing: border-box;
 }
 
 .middle_area > *{
@@ -229,55 +241,71 @@ a{
     /* width: 90%; */
 }
 
+.search_recipe{
+    box-sizing: border-box;
+    /* flex: 1 0 0; */
+}
 
+.share_recipe{
+    box-sizing: border-box;
+    /* flex: 1 0 0; */
+}
 
+/** Seccion ultimas historias compartidas ****/
 
 
 .latest_histories_section{
+    box-sizing: border-box;
+    /* flex: 1 0 0; */
     display: flex;
-    height: 100%;
+    /* height: 100%; */
     flex-direction: column;
-    background-color: crimson;
+    color: crimson;
     
 
 }
 
 .header_latest_histories_section{
-    height: 100%;
-    text-align: center;
+    box-sizing: border-box;
+    /* flex: 1 0 0; */
+    /* text-align: center; */
 }
 
 .latest_histories_boxes{
+    box-sizing: border-box;
     /* height: 100%; */
-    flex: 0 0 20%;
+    /* flex: 1 0 0; */
     display: flex;
     flex-direction: row;
     background-color: aqua;
-    padding: 20px;
-    gap: 10px;
-    justify-content: center;
-
-    flex-wrap: wrap;
+    /* padding: 20px; */
+    /* gap: 10px; */
+    /* justify-content: center;
+    align-items: flex-start; */
+    /* column-gap: 10px; */
+    /* flex-wrap: wrap; */
 }
 
 .history_box{
+    box-sizing: border-box;
     /* height: 100%; */
+    /* flex: 1 0 0; */
+    /* height: 50%; */
     display: flex;
     flex-direction: column;
     background-color: chocolate;
     color: black;
-    width: 47%;
     /* padding: 10px; */
 
-    border: 3px;
+    /* border: 3px; */
     
     border-radius: 10px;
     overflow: hidden;
 
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 
-    padding: 5px;
+    /* padding: 5px; */
     
 }
 
@@ -293,36 +321,54 @@ a{
 }
 
 .history_box img{
-    height: 80%;
-    width: 90%;
+    box-sizing: border-box;
+    /* width: 100%; */
+    /* position:relative; */
+    /* flex: 1 0 0; */
+    
 }
 
-.history_box > *{
-    text-align: center;
-}
+/* .history_box > *{ */
+    /* text-align: center; */
+/* } */
 
 .history_title{
-    padding-top: 10px;
+    box-sizing: border-box;
+    /* flex: 1 0 0; */
+    /* height: 100%; */
+    /* padding-top: 10px; */
 }
 
-
+/**** Fin diseño seccion historias *********/
 
 
 .latest_recipes{
+    /* flex: 1 0 0; */
     grid-area: latest_recipes;
     display: flex;
+
     flex-direction: column;
 
-    height: 100%;
+    /* height: 100%; */
+    /* width: 100%; */
     
     background-color: white;
     
-    align-items: center;
-    justify-content: center;
+    box-sizing: border-box;
+    /* align-items: center;
+    justify-content: center; */
 
-    row-gap: 10px;
+    /* row-gap: 10px; */
+
+    /* flex-wrap: wrap; */
 }
 
+
+
+.header_latest_recipes{
+    /* flex: 0 0 0; */
+    /* width: 92%; */
+}
 
 
 /***************************************/
@@ -331,27 +377,48 @@ a{
 /* Diseño caja que muestra una receta */
 
 .recipe_box{
+    /* flex: 0 0 0; */
+
     display: flex;
     flex-direction: column;
-    background-color: coral;
-    color: black;
+    background-color: #f5f5f5;
+    color: #b40432;
     
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     
-    width: 90%;
-
+    /* width: 92%; */
+    
     border-radius: 10px;
+    
+    box-sizing: border-box;
+    
+    /* padding: 5px; */
     overflow: hidden;
-
-    padding: 5px;
     
 }
 
-.recipe_box img{
-    height: 80%;
-    width: 90%;
+.recipe_box_img{
+    flex: 0  0 0;
+    /* height: 50px;
+    width: 250px; */
+    box-sizing: border-box;
+    
 }
+
+.recipe_box_img img{
+    object-fit: cover;
+    /* height: auto; */
+    vertical-align: middle;
+    border-radius: 5px;
+    width: 100%;
+    
+
+    /* width: 92%; */
+    
+}
+
+
 
 .recipe_box:hover{
     color:blue;
@@ -359,17 +426,20 @@ a{
 
 }
 
-.recipe_box:hover img{
+.recipe_box:hover .recipe_box_img img{
     transform: scale(1.05);
     transition: transform 0.5s ease;
 }
 
 
 .recipe_title{
-    padding-top: 10px;
-    width: 100%;
+    /* padding-top: 10px; */
+    /* width: 100%; */
+    flex: 0 0 0;
     font-weight: bold;
     text-align: center;
+    box-sizing: border-box;
+    /* width: 92%; */
 }
 
 /**********************************/
@@ -380,10 +450,12 @@ a{
 
 @media only screen and (max-width: 768px){
     .container{
+        grid-template: 10.5vh auto auto auto / 20% 55% 25%;
         grid-template-areas:"navegador navegador navegador"
                             "middle_area middle_area middle_area"
                             "right_side right_side right_side"
-                            "footer footer footer"
+                            "footer footer footer";
+        column-gap: 0;
     }
 
     .navegador{
@@ -413,14 +485,14 @@ a{
 }
 
 
-@media only screen and (max-width: 600px){
+/* @media only screen and (max-width: 600px){
     .container{
         grid-template-areas:"navegador navegador navegador"
                             "middle_area middle_area middle_area"
                             "right_side right_side right_side"
                             "footer footer footer"
     }
-}
+} */
 
 
 
