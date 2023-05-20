@@ -1,0 +1,39 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f8ecd1;
+}
+
+h1 {
+    text-align: center;
+    color: #89579b;
+}
+
+h2 {
+    text-align: center;
+    color: #f8ecd1;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.categoria-receta {
+    background-color: #89579b;
+    padding: 5px;
+    text-align: center;
+}
+
+.categoria-receta img {
+    max-width: 100%;
+    height: auto;
+}
+
