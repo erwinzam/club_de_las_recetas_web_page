@@ -9,6 +9,49 @@ body {
   background-image: url(../img/fondocomidas2.png);
 }
 
+/* Maquetacion de la pagina de categorías */
+
+body .web_page_layout{
+  width: inherit;
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+.web_page_layout{
+  /* background-color: #f8ecd1; */
+  
+  display: grid;
+  row-gap: 15px;
+  
+  grid-template: 10.5vh auto auto auto 20vh / 20% 55% 25%;
+  grid-template-areas:"navegador navegador navegador" 
+                      "middle_area middle_area middle_area"
+                       "middle_area middle_area middle_area"
+                       "middle_area middle_area middle_area"
+                       "footer footer footer";
+}
+
+
+.middle_area{
+  grid-area: middle_area;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "search_section";
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.search_section{
+  grid-area: search_section;
+}
+
+/* Fin maquetación de la pagina categorías */
+
+
+
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;

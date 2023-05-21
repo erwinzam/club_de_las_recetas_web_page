@@ -1,11 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
 
 body {
     margin: 0;
     background-color: #f8ecd1;
 }
+
+
+/* Maquetacion de la pagina de categorías */
+
+body .web_page_layout{
+    width: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.web_page_layout{
+    background-color: #f8ecd1;
+    
+    display: grid;
+    row-gap: 15px;
+    
+    grid-template: 10.5vh auto auto auto 20vh / 20% 55% 25%;
+    grid-template-areas:"navegador navegador navegador" 
+                        "middle_area middle_area middle_area"
+                         "middle_area middle_area middle_area"
+                         "middle_area middle_area middle_area"
+                         "footer footer footer";
+}
+
+
+.middle_area{
+    grid-area: middle_area;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "category_section";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.category_section{
+    grid-area: category_section;
+}
+
+/* Fin maquetación de la pagina categorías */
+
+
+
+
+/* Lo que contiene category_section */
 
 h1 {
     text-align: center;
@@ -37,3 +86,4 @@ h2 {
     height: auto;
 }
 
+/* Fin lo que contiene category_section */
