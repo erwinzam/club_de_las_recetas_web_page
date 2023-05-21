@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO DE RECETA</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+  <div>
+    
+  </div>
+
+    <h1>Subir Receta de Cocina</h1>
+
+  <form action="#" method="post">
+    <label for="nombre">Nombre de la receta:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+    <label for="descripcion">Ingredientes:</label>
+    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+    <label for="descripcion">Instrucciones:</label>
+    <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+
+    <label for="tipo">Tipo de comida:</label>
+    <select id="tipo" name="tipo">
+      <option value="verano">Comida de verano</option>
+      <option value="vegana">Comida vegana</option>
+      <option value="Postre">Postre</option>
+      <option value="sintacc">Sin TACC</option>
+    </select>
+
+    <label for="imagen">Imagen de la receta:</label>
+    <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
+
+
+    <input type="submit" value="Subir Receta">
+  </form>
+      
+    </form>
+</body>
+
+</html>
