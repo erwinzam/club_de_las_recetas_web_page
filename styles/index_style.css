@@ -11,36 +11,26 @@ body {
     /* width: 100vw; */
 }
 
-.section_text_font{
-    color: #323232;
-}
-
-body .container{
+body .web_page_layout{
     width: inherit;
 }
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
-/* .no_content{
-    grid-area: no_content;
+.section_text_font{
+    color: #323232;
 }
 
-.no_content_1{
-    grid-area: no_content_1;
-}
 
-.no_content_2{
-    grid-area: no_content_2;
-} */
-
-.container{
-    background-color: rgb(248, 236, 209);
+.web_page_layout{
+    background-color: #f8ecd1;
     
     display: grid;
-    /* gap: 15px; */
-    /* align-content: space-evenly; */
+    row-gap: 15px;
+    
     grid-template: 10.5vh auto auto auto 20vh / 20% 55% 25%;
     grid-template-areas:"navegador navegador navegador" 
                         "middle_area middle_area middle_area"
@@ -48,7 +38,6 @@ a{
                          "middle_area middle_area middle_area"
                          "footer footer footer";
 }
-
 
 .middle_area{
     grid-area: middle_area;
@@ -76,153 +65,6 @@ a{
     /* align-items: center;
     justify-content: center; */
 }
-
-
-
-/* Diseño barra de navegación */
-
-.navegador {
-    grid-area: navegador;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    display: grid;
-    grid-template: 100% / 310px calc(100% - 310px);
-    grid-template-areas: "logo_box nav_tabs";
-    row-gap: 0;
-    
-
-    justify-content: start;
-    align-items: center;
-    padding: 0px;
-    background-color: rgb(248, 236, 209);
-    color: #89579b;
-
-    border-style: none none outset none;
-}
-
-.nav_tabs{
-    grid-area: nav_tabs;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-between;
-    align-items: center; */
-}
-
-.nav_tabs a:visited{
-    color: inherit;
-}
-
-.nav_tabs a{
-    height: 100%;
-}
-
-.nav_tabs a:hover{
-    color: #89579b;
-}
-
-
-.tab {
-
-    margin: 0px;
-    /* padding-bottom: 10px;
-    padding-top: 10px; */
-    
-    height: 100%;
-    overflow: hidden;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    flex: 1 0 auto;
-    text-decoration: none; 
-}
-
-.tab:hover{
-    background-color: white;
-    text-decoration: underline;
-}
-
-
-
-
-/* Caja que contiene al logo,
- titulo de la página web y su motto */
- .logo_box {
-    /* flex: 0 0 290px; */
-    grid-area: logo_box;
-    height: 100%;
-    display: grid;
-    grid-template: 70% 30% / 20% 80%;
-    grid-template-areas: "logo titulo_pagina"
-                         "logo motto";
-    
-    justify-content: start;
-    align-items: center;
-    /* padding-top: 0.5vh;
-    padding-bottom: 0.5vh; */
-    padding-left: 10px;
-    /* column-gap: 10px; */
-    /* flex-wrap: wrap; */
-}
-
-.logo_box > a{
-    padding: 0;
-}
-
-.logo{
-    grid-area: logo;
-    padding: 0;
-    /* object-fit: cover; */
-    /* width: 100%;
-    max-height: 100%; */
-    height: 100%;
-    width: 100%;
-    
-    box-sizing: border-box;
-
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.logo img{
-    /* width: 100%; */
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-}
-
-
-.titulo_pagina {
-    /* width: auto; */
-    /* width: 100%; */
-    /* height: 100%; */
-    grid-area: titulo_pagina;
-    margin-top: 0;
-    font-weight: bold;
-    font-size: 4vh;
-    font-family: 'Dancing Script', cursive;
-    box-sizing: border-box;
-}
-
-.motto{
-    grid-area: motto;
-    box-sizing: border-box;
-    
-}
-
-.motto > *{
-    text-align: center;
-    margin-top: 0px;
-    font-size: 1.5vh;
-}
-/* ************************************* */
-
 
 
 
@@ -459,7 +301,7 @@ a{
 
 
 @media only screen and (max-width: 768px){
-    .container{
+    .web_page_layout{
         grid-template: 10.5vh auto auto 20vh / 20% 55% 25%;
         grid-template-areas:"navegador navegador navegador"
                             "middle_area middle_area middle_area"
@@ -475,41 +317,9 @@ a{
                              "right_side";
     }
 
-    .navegador{
-        display: grid;
-        grid-template: 60% 40% / 100%;
-        grid-template-areas: "logo_box"
-                             "nav_tabs";
-        
-    }
-
-    .logo_box{
-        column-gap: 0;
-        grid-template-columns: 46.11px 223.73px;
-        justify-content: center;
-        padding: 0;
-    }
-
-    .logo{
-        justify-content: end;
-        width: auto;
-    }
-
-    .tab *{
-        font-size: x-small;
-    }
-
 }
 
 
-/* @media only screen and (max-width: 600px){
-    .container{
-        grid-template-areas:"navegador navegador navegador"
-                            "middle_area middle_area middle_area"
-                            "right_side right_side right_side"
-                            "footer footer footer"
-    }
-} */
 
 
 
