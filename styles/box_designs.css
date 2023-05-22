@@ -184,15 +184,34 @@
 
 
 /* ************************************* */
-
-
-
-footer{
+footer {
     grid-area: footer;
-
-    background-color: greenyellow;
+    background-color: #89579b;
+    color: #f8ecd1;
     justify-content: space-evenly;
     align-items: center;
     padding: 5px;
     text-align: center;
+}
+
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.redes-sociales li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    color: #f8ecd1 ;
+    font-size: 20px;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
 }
