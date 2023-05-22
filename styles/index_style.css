@@ -25,7 +25,6 @@ a{
     color: #323232;
 }
 
-
 .web_page_layout{
     /* background-color: #f8ecd1; */
     
@@ -34,19 +33,32 @@ a{
     
     grid-template: 10.5vh auto auto auto 20vh / 20% 55% 25%;
     grid-template-areas:"navegador navegador navegador" 
-                        "middle_area middle_area middle_area"
-                         "middle_area middle_area middle_area"
-                         "middle_area middle_area middle_area"
+                        "main_content main_content main_content"
+                         "main_content main_content main_content"
+                         "main_content main_content main_content"
                          "footer footer footer";
+}
+
+
+.main_content{
+    display: grid;
+    grid-area: main_content;
+    grid-template: 100% / 100%;
+    grid-template-areas: "middle_area";
+    /* justify-content: space-around; */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1440px;
 }
 
 .middle_area{
     grid-area: middle_area;
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 75% auto;
     grid-template-areas: "left_side right_side";
-    margin-left: 10px;
-    margin-right: 10px;
+    column-gap: 20px;
+    
+
 }
 
 
@@ -56,7 +68,8 @@ a{
     flex-direction: column;
     /* padding: 0;
     margin: 0; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
+    /* width: 100%; */
     /* height: 100%;
     width: 100%; */
     /* width: 100%; */
@@ -85,23 +98,80 @@ a{
     /* align-items: center; */
     /* padding: 10px; */
     /* width: 50%; */
+    row-gap: 20px;
     box-sizing: border-box;
 }
 
-.middle_area > *{
+/* .middle_area > *{
     /* background-color: white; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     /* width: 90%; */
-}
+/* } */ 
 
 .search_recipe{
+    position: relative;
     box-sizing: border-box;
-    /* flex: 1 0 0; */
+    color:white;
+    border-radius: 10px;
+    overflow: hidden;
+    /* max-width: 355px; */
+}
+
+.search_recipe_background_image{
+    
+    height: 200px;
+}
+
+.search_recipe_background_image img{
+   width: 100%;
+   
+}
+
+.search_recipe_title{
+    position: absolute;
+    bottom: 1px;
+    background-color: #89579b73;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+   /* height: 100%; */
+}
+
+.search_recipe_title h1{
+    font-size: xx-large;
 }
 
 .share_recipe{
+    position: relative;
     box-sizing: border-box;
-    /* flex: 1 0 0; */
+    color:white;
+    border-radius: 10px;
+    overflow: hidden;
+    /* max-width: 355px; */
+}
+
+.share_recipe_background_image{
+    
+    height: 200px;
+}
+
+.share_recipe_background_image img{
+   width: 100%;
+   
+}
+
+.share_recipe_title{
+    position: absolute;
+    bottom: 1px;
+    background-color: #89579b73;
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+   /* height: 100%; */
+}
+
+.share_recipe_title h1{
+    font-size: xx-large;
 }
 
 /** Seccion ultimas historias compartidas ****/
@@ -111,9 +181,10 @@ a{
     box-sizing: border-box;
     /* flex: 1 0 0; */
     display: flex;
+    row-gap: 10px;
     /* height: 100%; */
     flex-direction: column;
-    color: crimson;
+    /* color: #89579b; */
     
 
 }
@@ -121,7 +192,9 @@ a{
 .header_latest_histories_section{
     box-sizing: border-box;
     /* flex: 1 0 0; */
-    /* text-align: center; */
+    text-align: center;
+    background-color: #89579b;
+    color: white;
 }
 
 .latest_histories_boxes{
@@ -130,7 +203,8 @@ a{
     /* flex: 1 0 0; */
     display: flex;
     flex-direction: row;
-    background-color: aqua;
+    /* background-color: aqua; */
+    column-gap: 20px;
     /* padding: 20px; */
     /* gap: 10px; */
     /* justify-content: center;
@@ -143,16 +217,16 @@ a{
     box-sizing: border-box;
     /* height: 100%; */
     /* flex: 1 0 0; */
-    /* height: 50%; */
+    width: 50%;
     display: flex;
     flex-direction: column;
-    background-color: chocolate;
+    background-color: #89579b;
     color: black;
     /* padding: 10px; */
 
     /* border: 3px; */
     
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: hidden;
 
     /* align-items: center;
@@ -162,19 +236,28 @@ a{
     
 }
 
-.history_box:hover{
-    color:blue;
+.history_box_image{
+    height: 250px;
+    overflow: hidden;
+}
+
+.history_box:hover .history_title{
+    color:#39d4c8;
     text-decoration: underline;
 
 }
 
-.history_box:hover img{
+.history_box:hover .history_box_image img{
     transform: scale(1.05);
     transition: transform 0.5s ease;
 }
 
 .history_box img{
     box-sizing: border-box;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    overflow: clip;
     /* width: 100%; */
     /* position:relative; */
     /* flex: 1 0 0; */
@@ -187,9 +270,16 @@ a{
 
 .history_title{
     box-sizing: border-box;
+    color: white;
+    text-align: center;
     /* flex: 1 0 0; */
     /* height: 100%; */
     /* padding-top: 10px; */
+}
+
+.history_desc{
+    color: white;
+    text-align: center;
 }
 
 /**** Fin diseño seccion historias *********/
@@ -199,19 +289,20 @@ a{
     /* flex: 1 0 0; */
     grid-area: latest_recipes;
     display: flex;
+    
 
     flex-direction: column;
 
-    /* height: 100%; */
-    /* width: 100%; */
     
-    background-color: white;
+    width: 100%;
+    
+    /* background-color: white; */
     
     box-sizing: border-box;
     /* align-items: center;
     justify-content: center; */
 
-    /* row-gap: 10px; */
+    row-gap: 10px;
 
     /* flex-wrap: wrap; */
 }
@@ -219,8 +310,9 @@ a{
 
 
 .header_latest_recipes{
-    /* flex: 0 0 0; */
-    /* width: 92%; */
+    color: white;
+    text-align: center;
+    background-color: #89579b;;
 }
 
 
@@ -230,18 +322,20 @@ a{
 /* Diseño caja que muestra una receta */
 
 .recipe_box{
+    position: relative;
     /* flex: 0 0 0; */
 
-    display: flex;
-    flex-direction: column;
-    background-color: #f5f5f5;
-    color: #b40432;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* background-color: #f5f5f5; */
+    color: #89579b;
+    /* height: 200px; */
     
     /* align-items: center;
     justify-content: center; */
     
     /* width: 92%; */
-    
+    width: 100%;
     border-radius: 10px;
     
     box-sizing: border-box;
@@ -252,7 +346,7 @@ a{
 }
 
 .recipe_box_img{
-    flex: 0  0 0;
+    
     /* height: 50px;
     width: 250px; */
     box-sizing: border-box;
@@ -262,7 +356,8 @@ a{
 .recipe_box_img img{
     object-fit: cover;
     /* height: auto; */
-    vertical-align: middle;
+    /* vertical-align: middle; */
+    height: 200px;
     border-radius: 5px;
     width: 100%;
     
@@ -273,8 +368,8 @@ a{
 
 
 
-.recipe_box:hover{
-    color:blue;
+.recipe_box:hover .recipe_title *{
+    color:#39d4c8;
     text-decoration: underline;
 
 }
@@ -282,16 +377,23 @@ a{
 .recipe_box:hover .recipe_box_img img{
     transform: scale(1.05);
     transition: transform 0.5s ease;
-}
+} 
 
 
 .recipe_title{
     /* padding-top: 10px; */
     /* width: 100%; */
-    flex: 0 0 0;
+    /* flex: 0 0 0; */
+    position: absolute;
+    bottom: 0px;
+    width:100%;
+
     font-weight: bold;
     text-align: center;
     box-sizing: border-box;
+    background-color:#89579b79;
+    color: white;
+    /* width: 100% */
     /* width: 92%; */
 }
 
@@ -299,16 +401,22 @@ a{
 
 
 
-
+@media only screen and (min-width: 1440px){
+    .main_content{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 @media only screen and (max-width: 768px){
     .web_page_layout{
         grid-template: 10.5vh auto auto 20vh / 20% 55% 25%;
         grid-template-areas:"navegador navegador navegador"
-                            "middle_area middle_area middle_area"
-                            "middle_area middle_area middle_area"
+                            "main_content main_content main_content"
+                            "main_content main_content main_content"
                             "footer footer footer";
         column-gap: 0;
+        
     }
 
     .middle_area{
@@ -318,9 +426,37 @@ a{
                              "right_side";
     }
 
+    .latest_histories_boxes{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        row-gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .history_box{
+        box-sizing: border-box;
+        /* height: 100%; */
+        /* flex: 1 0 0; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #89579b;
+        color: black;
+        /* padding: 10px; */
+    
+        /* border: 3px; */
+        
+        border-radius: 10px;
+        overflow: hidden;
+    
+        /* align-items: center;
+        justify-content: center; */
+    
+        /* padding: 5px; */
+        
+    }
 }
-
-
 
 
 
