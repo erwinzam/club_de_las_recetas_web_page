@@ -30,8 +30,9 @@
     background-color: rgb(248, 236, 209);
     color: #89579b;
 
-    border-style: none none outset none;
-    border-color: #89579b;
+    border-style: none none solid none;
+    /* border-bottom-color: #89579b; */
+    /* border-bottom: 1px; */
 }
 
 .nav_tabs{
