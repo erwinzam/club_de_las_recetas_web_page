@@ -81,11 +81,13 @@ h2 {
     background-color: #89579b;
     padding: 5px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .categoria-receta img {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 
 /* Fin lo que contiene category_section */
