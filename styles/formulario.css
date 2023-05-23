@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0px;
+  background-color: rgb(236, 222, 157);
+  background-image: url(../img/fondos/fondo_formulario.png);
+  /* background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-size: contain; */
+  /* overflow: hidden; */
+  /* background-size: cover; */
+}
+
+body .web_page_layout{
+    width: inherit;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.web_page_layout{
+  /* background-color: #f8ecd1; */
+  
+  display: grid;
+  row-gap: 15px;
+  
+  grid-template: 10.5vh auto auto auto 20vh / 20% 55% 25%;
+  grid-template-areas:"navegador navegador navegador" 
+                      "main_content main_content main_content"
+                       "main_content main_content main_content"
+                       "main_content main_content main_content"
+                       "footer footer footer";
+}
+
+
+.main_content{
+  display: grid;
+  grid-area: main_content;
+  grid-template: 100% / 100%;
+  grid-template-areas: "middle_area";
+  /* justify-content: space-around; */
+  margin-left: 10px;
+  margin-right: 10px;
+
+}
+
+
+.middle_area{
+  grid-area: middle_area;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "formulary_section";
+}
+
+.formulary_section{
+  grid-area: formulary_section;
+
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  font-family: Arial, sans-serif;
+  margin: 50px;
+  padding: 2rem 3rem;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 25px #222;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+@media only screen and (max-width: 821px){
+  .formulary_section{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+
+
+  h1 {
+    text-align: center;
+    background-color: red;
+    width: 100%;
+    /* margin-left: 17%; */
+
+  }
+
+  form {
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  select {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
