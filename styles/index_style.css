@@ -448,6 +448,7 @@ a{
         grid-template-columns: 100%;
         grid-template-areas: "left_side"
                              "right_side";
+        row-gap: 20px;
     }
 
     .latest_histories_boxes{
