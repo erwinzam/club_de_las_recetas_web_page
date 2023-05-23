@@ -274,6 +274,7 @@ footer {
     align-items: center;
     padding: 5px;
     text-align: center;
+    border-style: solid none none none;
 }
 
 .redes-sociales {
