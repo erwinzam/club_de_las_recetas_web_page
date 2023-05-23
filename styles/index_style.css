@@ -141,6 +141,18 @@ a{
     font-size: xx-large;
 }
 
+.search_recipe:hover .search_recipe_title *{
+    color:#39d4c8;
+    text-decoration: underline;
+
+}
+
+.search_recipe:hover .search_recipe_background_image img{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+
 .share_recipe{
     position: relative;
     box-sizing: border-box;
@@ -173,6 +185,18 @@ a{
 .share_recipe_title h1{
     font-size: xx-large;
 }
+
+.share_recipe:hover .share_recipe_title *{
+    color:#39d4c8;
+    text-decoration: underline;
+
+}
+
+.share_recipe:hover .share_recipe_background_image img{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
 
 /** Seccion ultimas historias compartidas ****/
 
