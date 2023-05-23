@@ -7,6 +7,6 @@ Esta página web esta bajo desarrollo por:
 
 [Juan Martin Opacak](https://github.com/jopacak)
 
-[Nombre Apellido](<link github>)
+[Rocio Catalina Martinez](https://github.com/cata-martinez)
 
-[Nombre Apellido](<link github>)
+[Nombre Apellido](https://github.com/javiTorres97)
