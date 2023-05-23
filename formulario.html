@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2a3b824eb2.js" crossorigin="anonymous"></script>
+    <script src="js/reSubi.js"></script>
 </head>
 
 <body>
@@ -64,14 +65,14 @@
                 <label for="nombre">Nombre de la receta:</label>
                 <input type="text" id="nombre" name="nombre" required>
             
-                <label for="descripcion">Descripción:</label>
+                <label for="descrip">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
             
-                <label for="descripcion">Ingredientes:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                <label for="ingre">Ingredientes:</label>
+                <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
             
-                <label for="descripcion">Instrucciones:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+                <label for="instrucciones">Instrucciones:</label>
+                <textarea id="instrucciones" name="instrucciones" rows="4" required></textarea>
             
                 <label for="tipo">Tipo de comida:</label>
                 <select id="tipo" name="tipo">
@@ -82,10 +83,13 @@
                 </select>
             
                 <label for="imagen">Imagen de la receta:</label>
-                <input type="file" id="imagen" name="imagen" accept="image/*" required><br><br>
+                <input type="file" name="imagen" accept="image/*" required><br><br>
+
+                <label for="nombre">Email de contacto:</label>
+                <input type="text" id="email" name="email" required>
             
             
-                <input type="submit" value="Subir Receta">
+                <input type="submit" value="Subir Receta" onclick="return subido()">
               </form>
             </div>     
           </div>
