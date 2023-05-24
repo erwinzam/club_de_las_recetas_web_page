@@ -66,6 +66,7 @@ a{
     grid-area: right_side;
     display: flex;
     flex-direction: column;
+    row-gap: 20px;
     /* padding: 0;
     margin: 0; */
     /* box-sizing: border-box; */
@@ -198,6 +199,13 @@ a{
 }
 
 
+.latest_histories_and_recipe_of_day_section{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+}
+
+
 /** Seccion ultimas historias compartidas ****/
 
 
@@ -209,6 +217,7 @@ a{
     /* height: 100%; */
     flex-direction: column;
     /* color: #89579b; */
+    width: calc(100% * 2/3)
     
 
 }
@@ -219,6 +228,7 @@ a{
     text-align: center;
     background-color: #89579b;
     color: white;
+   
 }
 
 .latest_histories_boxes{
@@ -307,6 +317,89 @@ a{
 }
 
 /**** Fin diseño seccion historias *********/
+
+
+
+/* Diseño seccion receta del día */
+
+.recipe_of_day_section{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: calc(100% * 1/3)
+}
+
+.header_recipe_of_day_section{
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #89579b;
+    color: white;
+}
+
+.recipe_of_day_box{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #89579b;
+    overflow: hidden;
+}
+
+.recipe_of_day_img{
+    height: 250px;
+    overflow: hidden;
+}
+
+.recipe_of_day_box:hover .recipe_of_day_title{
+    color:#39d4c8;
+    text-decoration: underline;
+
+}
+
+.recipe_of_day_box:hover .recipe_of_day_desc{
+    color:#39d4c8;
+    text-decoration: underline;
+
+}
+
+.recipe_of_day_box:hover .recipe_of_day_img img{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+.recipe_of_day_img img{
+    box-sizing: border-box;
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+    overflow: clip;
+
+}
+
+.recipe_of_day_title{
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+}
+
+.recipe_of_day_desc{
+    color: white;
+    text-align: center;
+}
+
+/* Fin diseño de la sección Receta del día */
+
+
+
+.animation_vid{
+    width: 100%;
+    height: 250px;
+}
+
+.animation_vid iframe{
+    width: 100%;
+    height: 100%
+}
 
 
 .latest_recipes{
@@ -451,12 +544,31 @@ a{
         row-gap: 20px;
     }
 
+    .latest_histories_and_recipe_of_day_section{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        row-gap: 20px;
+        flex-wrap: wrap;
+        
+        
+    }
+
+    .latest_histories_section{
+        width: 100%;
+    }
+
     .latest_histories_boxes{
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
         row-gap: 20px;
         flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .recipe_of_day_section{
+        width: 100%;
     }
 
     .history_box{
