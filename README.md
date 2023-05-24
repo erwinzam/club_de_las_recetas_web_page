@@ -13,3 +13,5 @@ Esta página web esta bajo desarrollo por:
 
 ## Observación
 - Se ha utilizado la API rest de esta [página](https://www.themealdb.com/api.php) que contiene una base de datos de recetas de comidas con nombre, imagen, ingredientes, video de preparación, etc. En nuestro caso hemos utilizado esta [URL](www.themealdb.com/api/json/v1/1/random.php) que nos da una receta de cocinan random de su base de datos y que esta receta se muestra en el portal del sitio web en la sección de "Receta del día". El script JS que hace esto capaz se encuentra en el path del repositorio como js/fetch_random_recipe.js.
+- Hay 5 archivos html que se han desarrollado que los mismos se puede acceder desde el portal del sitio web. En la imagen se abajo se recuadra en rojo los links en funcionamiento que redirecciona a los codigo fuente html trabajados:
+![linka](README_img/web_index_screenshot.png)
