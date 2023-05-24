@@ -59,13 +59,21 @@ a{
 
 h1 {
     text-align: center;
-    color: #89579b;
-    background-color: #f8ecd1; 
+    /* color: #89579b; */
+    /* background-color: #f8ecd1;  */
+    background-color: #89579b;
+    /* color: #f8ecd1; */
+    color: white;
+    font-weight: 700;
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 h2 {
     text-align: center;
-    color: #f8ecd1;
+    /* color: #f8ecd1; */
+    color: white;
 }
 
 .contenedor {
