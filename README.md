@@ -9,4 +9,4 @@ Esta página web esta bajo desarrollo por:
 
 [Rocio Catalina Martinez](https://github.com/cata-martinez)
 
-[Nombre Apellido](https://github.com/javiTorres97)
+[Javier Torres](https://github.com/javiTorres97)
