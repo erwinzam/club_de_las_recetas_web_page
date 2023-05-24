@@ -30,18 +30,3 @@ fetch('https://www.themealdb.com/api/json/v1/1/random.php')
 
     })
         
-
-
-
-
-
-// function fetch_random_recipe(){
-//     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-
-//         .then(datos => datos.json)
-//         .then(datos => {
-//             console.log(datos)
-//         })
-// }
-
-// fetch_random_recipe()

@@ -1,32 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* Establezco fuente que utiliza el sitio web */
 *{
-    /* font-family: 'Open Sans', sans-serif; */
+
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Seteo fondo del body */
 body {
     margin: 0;
-    background-color: rgb(248, 236, 209);
+    
     background-image: url(../img/fondos/fondocomidas2_alt_2.png);
-    /* width: 100vw; */
+
 }
 
+/* Hago heredar el ancho de la página del body
+   y se lo asigno al grid template de la pagina web a la
+   clase web_page_layout */
 body .web_page_layout{
     width: inherit;
 }
 
+/* Desactivo la animacion de los hiperlinks que vienen por defecto */
 a{
     text-decoration: none;
     color: inherit;
 }
 
+/* Fuente de texto de una sección */
 .section_text_font{
     color: #323232;
 }
 
+/* Template de una pagina web con navegador, contenido principal y pie de página */
 .web_page_layout{
-    /* background-color: #f8ecd1; */
+
     
     display: grid;
     row-gap: 15px;
@@ -39,18 +47,19 @@ a{
                          "footer footer footer";
 }
 
-
+/* El contenido principal esta contenido por una area media */
 .main_content{
     display: grid;
     grid-area: main_content;
     grid-template: 100% / 100%;
     grid-template-areas: "middle_area";
-    /* justify-content: space-around; */
+
     margin-left: 10px;
     margin-right: 10px;
     max-width: 1440px;
 }
 
+/* El area media se divide en 2: lado izquierdo y lado derecho */
 .middle_area{
     grid-area: middle_area;
     display: grid;
@@ -61,61 +70,38 @@ a{
 
 }
 
-
+/* Lado derecho de la area media */
 .right_side{
     grid-area: right_side;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    /* padding: 0;
-    margin: 0; */
-    /* box-sizing: border-box; */
-    /* width: 100%; */
-    /* height: 100%;
-    width: 100%; */
-    /* width: 100%; */
-    /* margin-right: 300px; */
 
-    /* margin-right: 10px; */
-    /* align-items: center;
-    justify-content: center; */
 }
 
 
 
 
-
+/* Lado izquiedo del area izquierda */
 .left_side{
     grid-area: left_side;
-    /* height: 100%; */
-    /* width: 100%; */
-    
-    /* margin-left: 10px; */
-    /* background-color: #FAF9FB; */
+
     display: flex;
     flex-direction: column;
-    /* row-gap: 10px; */
-    /* justify-content: flex-start; */
-    /* align-items: center; */
-    /* padding: 10px; */
-    /* width: 50%; */
+
     row-gap: 20px;
     box-sizing: border-box;
 }
 
-/* .middle_area > *{
-    /* background-color: white; */
-    /* border-radius: 10px; */
-    /* width: 90%; */
-/* } */ 
 
+/* Sección de la caja de Busca tu receta */
 .search_recipe{
     position: relative;
     box-sizing: border-box;
     color:white;
     border-radius: 10px;
     overflow: hidden;
-    /* max-width: 355px; */
+    
 }
 
 .search_recipe_background_image{
@@ -135,7 +121,7 @@ a{
     text-align: center;
     width: 100%;
     z-index: 3;
-   /* height: 100%; */
+   
 }
 
 .search_recipe_title h1{
@@ -154,13 +140,15 @@ a{
 }
 
 
+
+/* Sección de la caja Comparte tu receta */
 .share_recipe{
     position: relative;
     box-sizing: border-box;
     color:white;
     border-radius: 10px;
     overflow: hidden;
-    /* max-width: 355px; */
+    
 }
 
 .share_recipe_background_image{
@@ -180,7 +168,7 @@ a{
     text-align: center;
     width: 100%;
     z-index: 3;
-   /* height: 100%; */
+   
 }
 
 .share_recipe_title h1{
@@ -211,12 +199,12 @@ a{
 
 .latest_histories_section{
     box-sizing: border-box;
-    /* flex: 1 0 0; */
+    
     display: flex;
     row-gap: 10px;
-    /* height: 100%; */
+    
     flex-direction: column;
-    /* color: #89579b; */
+    
     width: calc(100% * 2/3)
     
 
@@ -224,7 +212,7 @@ a{
 
 .header_latest_histories_section{
     box-sizing: border-box;
-    /* flex: 1 0 0; */
+    
     text-align: center;
     background-color: #89579b;
     color: white;
@@ -233,41 +221,25 @@ a{
 
 .latest_histories_boxes{
     box-sizing: border-box;
-    /* height: 100%; */
-    /* flex: 1 0 0; */
+    
     display: flex;
     flex-direction: row;
-    /* background-color: aqua; */
+    
     column-gap: 20px;
-    /* padding: 20px; */
-    /* gap: 10px; */
-    /* justify-content: center;
-    align-items: flex-start; */
-    /* column-gap: 10px; */
-    /* flex-wrap: wrap; */
+    
 }
 
 .history_box{
     box-sizing: border-box;
-    /* height: 100%; */
-    /* flex: 1 0 0; */
+    
     width: 50%;
     display: flex;
     flex-direction: column;
     background-color: #89579b;
     color: black;
-    /* padding: 10px; */
-
-    /* border: 3px; */
     
-    /* border-radius: 10px; */
     overflow: hidden;
 
-    /* align-items: center;
-    justify-content: center; */
-
-    /* padding: 5px; */
-    
 }
 
 .history_box_image{
@@ -292,23 +264,17 @@ a{
     object-fit: cover;
     width: 100%;
     overflow: clip;
-    /* width: 100%; */
-    /* position:relative; */
-    /* flex: 1 0 0; */
+   
     
 }
 
-/* .history_box > *{ */
-    /* text-align: center; */
-/* } */
+
 
 .history_title{
     box-sizing: border-box;
     color: white;
     text-align: center;
-    /* flex: 1 0 0; */
-    /* height: 100%; */
-    /* padding-top: 10px; */
+    
 }
 
 .history_desc{
@@ -390,7 +356,7 @@ a{
 /* Fin diseño de la sección Receta del día */
 
 
-
+/* Sección de la animación de video */
 .animation_vid{
     width: 100%;
     height: 250px;
@@ -401,9 +367,9 @@ a{
     height: 100%
 }
 
-
+/* Sección de las ultimas recetas subidas */
 .latest_recipes{
-    /* flex: 1 0 0; */
+    
     grid-area: latest_recipes;
     display: flex;
     
@@ -413,15 +379,14 @@ a{
     
     width: 100%;
     
-    /* background-color: white; */
+    
     
     box-sizing: border-box;
-    /* align-items: center;
-    justify-content: center; */
+    
 
     row-gap: 10px;
 
-    /* flex-wrap: wrap; */
+   
 }
 
 
@@ -440,46 +405,37 @@ a{
 
 .recipe_box{
     position: relative;
-    /* flex: 0 0 0; */
-
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* background-color: #f5f5f5; */
+    
     color: #89579b;
-    /* height: 200px; */
     
-    /* align-items: center;
-    justify-content: center; */
     
-    /* width: 92%; */
+    
     width: 100%;
     border-radius: 10px;
     
     box-sizing: border-box;
     
-    /* padding: 5px; */
+    
     overflow: hidden;
     
 }
 
 .recipe_box_img{
     
-    /* height: 50px;
-    width: 250px; */
+    
     box-sizing: border-box;
     
 }
 
 .recipe_box_img img{
     object-fit: cover;
-    /* height: auto; */
-    /* vertical-align: middle; */
+    
     height: 200px;
     border-radius: 5px;
     width: 100%;
     
 
-    /* width: 92%; */
+   
     
 }
 
@@ -498,9 +454,7 @@ a{
 
 
 .recipe_title{
-    /* padding-top: 10px; */
-    /* width: 100%; */
-    /* flex: 0 0 0; */
+    
     position: absolute;
     bottom: 0px;
     width:100%;
@@ -510,13 +464,13 @@ a{
     box-sizing: border-box;
     background-color:#89579b79;
     color: white;
-    /* width: 100% */
-    /* width: 92%; */
+    
 }
 
 /**********************************/
 
 
+/* Media queries para diferentes tamaños de pantalla */
 
 @media only screen and (min-width: 1440px){
     .main_content{
@@ -573,24 +527,18 @@ a{
 
     .history_box{
         box-sizing: border-box;
-        /* height: 100%; */
-        /* flex: 1 0 0; */
+        
         width: 100%;
         display: flex;
         flex-direction: column;
         background-color: #89579b;
         color: black;
-        /* padding: 10px; */
-    
-        /* border: 3px; */
+        
         
         border-radius: 10px;
         overflow: hidden;
     
-        /* align-items: center;
-        justify-content: center; */
-    
-        /* padding: 5px; */
+        
         
     }
 }
