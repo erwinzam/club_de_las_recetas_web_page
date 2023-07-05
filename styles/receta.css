@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(248, 236, 209);
+    background-image: url(../img/fondos/fondocomidas2_alt_2.png);
+}
+
+body .web_page_layout {
+    width: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section_text_font {
+    color: #323232;
+}
+
+.web_page_layout {
+    min-height: 100vh;
+    display: grid;
+    row-gap: 15px;
+    grid-template: 10.5vh auto 20vh / 20% 55% 25%;
+    grid-template-areas: "navegador navegador navegador" 
+                        "main_content main_content main_content"
+                        "footer footer footer";
+}
+
+.main_content {
+    display: grid;
+    grid-area: main_content;
+    grid-template: 100% / 100%;
+    grid-template-areas: "middle_area";
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 1440px;
+}
+
+.middle_area {
+    grid-area: middle_area;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "about_section";
+    column-gap: 20px;
+}
+
+.about_section {
+    grid-area: about_section;
+    background-color: #FFFFFF90;
+    padding: 20px;
+}
+
+@media only screen and (min-width: 1440px) {
+    .main_content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
