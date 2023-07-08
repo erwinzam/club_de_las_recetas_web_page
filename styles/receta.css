@@ -47,14 +47,19 @@ a {
     grid-area: middle_area;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-areas: "about_section";
+    grid-template-areas: "recipe_section";
     column-gap: 20px;
 }
 
-.about_section {
-    grid-area: about_section;
+.recipe_section {
+    grid-area: recipe_section;
     background-color: #FFFFFF90;
     padding: 20px;
+}
+
+.recipe-image {
+    max-width: 200px;
+    height: auto;
 }
 
 @media only screen and (min-width: 1440px) {

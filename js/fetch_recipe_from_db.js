@@ -1,3 +1,5 @@
+let titulo_pagina_receta_sel = document.querySelector('.titulo-pagina-receta');
+
 let titulo_receta = document.querySelector('.nombre_receta');
 let categoria = document.querySelector('.categoria');
 let autor = document.querySelector('.author');
@@ -10,6 +12,9 @@ fetch('https://erwinzam.pythonanywhere.com/recetas')
     .then(response => {return response.json()})
     .then(data => {
         console.log(data[0].URL_imagen);
+
+        titulo_pagina_receta_sel.innerHTML = `El club de las recetas - ${data[0].nombre}`
+        
         titulo_receta.innerHTML =`${data[0].nombre}`;
         categoria.innerHTML = `${data[0].categoria}`;
         autor.innerHTML = `${data[0].autor}`;

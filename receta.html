@@ -1,48 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Recetas de cocina</title>
-    <link rel="stylesheet" type="text/css" href="styles\receta.css">
-    <style>
-        .recipe-image {
-            max-width: 200px;
-            height: auto;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="titulo-pagina-receta">El club de las recetas - Milanesa con papa fritas</title>
+    <link rel="shortcut icon" href="img/logo/chef_hat.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/receta.css">
+    <link rel="stylesheet" href="styles/box_designs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a3b824eb2.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <section class="main-content">
-        <h1>Recetas de cocina</h1>
-        
-        <article>
-            <h2 class="nombre_receta">Milanesa con papas fritas</h2>
-            <p>Categoria: <span class="categoria">Carnes</span></p>
-            <p>Autor: <span class="author">Cosme Fulanito</span></p>
-            <p>Tiempo de Preparación: <span class="cook-time">40 minutos</span></p>
-            <p>Apto celiacos (sin TACC): <span class="celiaco">Si</span></p>
-            <img src="img\recetas\milanesa.jpg" alt="Imagen de la receta" class="recipe-image">
-            
-            <h3>Ingredientes</h3>
-            <ul class="ingredients">
-                <li>Carne 1 kg</li>
-                <li>Papas 3 unidades</li>
-                <li>Aceite 600 ml</li>
-            </ul>
-            
-            <h3>Preparación</h3>
-            <ol class="preparation">
-                <li>Rebozar la carne</li>
-                <li>Poner la carne al horno</li>
-                <li>Hacer las papas</li>
-            </ol>
-        </article>
-        
-        <script src="js/fetch_recipe_from_db.js"></script>
-    </section>
+<body class="cuerpo">
+    <div class="web_page_layout">
+        <nav class="navegador">
+
+            <a class="logo_box" href="index.html">
+                <div class="logo">
+                    <img  src="img/logo/chef-hat.png" alt="Logo de &quot El club de las recetas &quot">
+                </div>
+                <div class="titulo_pagina">El club de las recetas</div>
+                <div class="motto"><i>Donde encontras la receta que buscas</i></div>
+            </a>
     
-    <footer>
-        <p>Derechos de autor © 2023 Recetas de cocina</p>
-    </footer>
+            <div class="nav_tabs">
+                <a class="tab" href="index.html">
+                    <b>Inicio</b>
+                </a>
+        
+        
+                <a class="tab" href="sobre-nosotros.html">
+                    <b>Nosotros</b>
+                </a>
+        
+                <a class="tab" href="#">
+                    <b>Historias</b>
+                </a> 
+        
+                <a class="tab" href="categorias.html">
+                    <b>Categorías</b>
+                </a> 
+        
+                <a class="tab" href="busqueda.html">
+                    <b>Busqueda</b>
+                </a> 
+            </div>
+    
+        </nav>
+    
+        <section class="main_content">
+            
+            
+            <div class="middle_area">
+                <article class="recipe_section">
+                    <h1>Recetas de cocina</h1>
+                    <h2 class="nombre_receta">Milanesa con papas fritas</h2>
+                    <p>Categoria: <span class="categoria">Carnes</span></p>
+                    <p>Autor: <span class="author">Cosme Fulanito</span></p>
+                    <p>Tiempo de Preparación: <span class="cook-time">40 minutos</span></p>
+                    <p>Apto celiacos (sin TACC): <span class="celiaco">Si</span></p>
+                    <img src="img\recetas\milanesa.jpg" alt="Imagen de la receta" class="recipe-image">
+                    
+                    <h3>Ingredientes</h3>
+                    <ul class="ingredients">
+                        <li>Carne 1 kg</li>
+                        <li>Papas 3 unidades</li>
+                        <li>Aceite 600 ml</li>
+                    </ul>
+                    
+                    <h3>Preparación</h3>
+                    <ol class="preparation">
+                        <li>Rebozar la carne</li>
+                        <li>Poner la carne al horno</li>
+                        <li>Hacer las papas</li>
+                    </ol>
+                    <script src="js/fetch_recipe_from_db.js"></script>
+                </article>
+            </div>
+            
+            
+        </section>
+        
+        <footer>
+            <div class="contenedor-footer">
+               <ul class="redes-sociales">
+                   <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                   <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                   <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                   <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+               </ul>
+               <p>2023 - El club de las recetas. Todos los derechos reservados.</p>
+           </div>
+        </footer>
+    </div>
 </body>
 </html>
 
