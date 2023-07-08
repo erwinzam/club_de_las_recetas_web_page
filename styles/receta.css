@@ -62,10 +62,10 @@ a {
     height: auto;
 }
 
-@media only screen and (min-width: 1440px) {
-    .main_content {
+@media only screen and (min-width: 1440px){
+    .main_content{
+        width: 1440px;
         margin-left: auto;
         margin-right: auto;
     }
 }
-
