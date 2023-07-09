@@ -69,22 +69,67 @@
                 <label for="descrip">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
             
-                <label for="ingre">Ingredientes:</label>
-                <textarea id="ingredientes" name="ingredientes" rows="4" required></textarea>
+                <label for="ingre">Ingredientes</label>
+                <div class="ingredientes_form_section">
+                    <div class="ingredientes_form">
+                        <div class="ingrediente_form">
+                            <label for="ingrediente1" style="display: inline;">Ingrediente 1:</label>
+                            <input type="text" id="ingrediente1" name="ingrediente1" required>
+                            <button type="button" onclick="removeIngredient(this)">Eliminar ingrediente</button>
+                        </div>
+                    </div>
+                    <button type="button" onclick="addIngredient()">Agregar ingrediente</button>
+                    <script src="js/add_remove_an_ingredient.js"></script>
+                </div>
             
-                <label for="instrucciones">Instrucciones:</label>
-                <textarea id="instrucciones" name="instrucciones" rows="4" required></textarea>
+                <label for="instrucciones">Instrucciones</label>
+                <div class="instrucciones_form">
+                    <div class="pasos_form">
+                        <div class="paso_form">
+                            <label for="step1">Paso 1:</label>
+                            <textarea id="step1" name="step1" rows="2" required></textarea>
+                            <button type="button" onclick="removeStep(this)" style="display: inline;">Eliminar paso</button>
+                        </div>
+                    </div>
+                    <button type="button" onclick="addStep()">Agregar paso</button>
+                    <script src="js/add_remove_instruction_step.js"></script>
+                </div>
             
                 <label for="tipo">Tipo de comida:</label>
                 <select id="tipo" name="tipo">
-                  <option value="verano">Comida de verano</option>
-                  <option value="vegana">Comida vegana</option>
-                  <option value="Postre">Postre</option>
-                  <option value="sintacc">Sin TACC</option>
+                  <option value="" disabled selected>Elije tipo de comida</option>
+                  <option value="comidadeverano">Comida de verano</option>
+                  <option value="comidavegana">Comida vegana</option>
+                  <option value="postres">Postres</option>
+                  <option value="aperitivos">Aperitivos</option>
+                  <option value="coctelesybebidas">Cocteles y Bebidas</option>
+                  <option value="panes">Panes</option>
+                  <option value="sopasycremas">Sopas y cremas</option>
+                  <option value="ensaladas">Ensaladas</option>
+                  <option value="verdurasylegumbres">Verduras y legumbres</option>
+                  <option value="pescadosymariscos">Pescados y mariscos</option>
+                  <option value="carnes">Carnes</option>
+                  <option value="pastas">Pastas</option>
                 </select>
+                <script src="js/order_categories_select_options.js"></script>
+
+                <label for="estacc">¿Contiene TACC?</label>
+                <br>
+                <input type="radio" id="es-tacc" name="estacc" value="es-tacc" checked>
+                <label for="es-tacc">Si</label>
+                <input type="radio" id="no-es-tacc" name="estacc" value="no-es-tacc">
+                <label for="no-es-tacc">No</label>
+                <br>
+
             
-                <label for="imagen">Imagen de la receta:</label>
-                <input type="file" name="imagen" accept="image/*" required><br><br>
+                <label for="imagen">URL imagen:</label>
+                <div class="URL_imagen_section">
+                    <div class="URL_imagen_form">
+                        <input type="text" id="URL_imagen" name="URL_imagen" required>
+                    </div>
+                    <button type="button" onclick="previewURLImage()">Previsualizar imagen</button>
+                    <script src="js/preview_URL_image.js"></script>
+                </div>
 
                 <label for="nombre">Email de contacto:</label>
                 <input type="text" id="email" name="email" required>

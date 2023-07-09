@@ -137,3 +137,13 @@ a{
     color: #89579b;
     font-weight: bold;
   }
+
+  input[type="radio"],
+  label {
+    display: inline;
+  }
+
+.recipe-image-preview {
+  max-width: 200px;
+  height: auto;
+}  
