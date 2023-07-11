@@ -1,7 +1,7 @@
 
 function removeRecipeFromDB(){
     event.preventDefault();
-    const URL_db = "http://erwinzam.pythonanywhere.com/";
+    const URL_db = "https://erwinzam.pythonanywhere.com/";
 
     var id_receta = document.getElementById("id_receta").value;
     console.log(id_receta);

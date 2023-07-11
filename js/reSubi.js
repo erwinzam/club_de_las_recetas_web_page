@@ -2,7 +2,7 @@
 function subido(){
    event.preventDefault();
 
-   const URL_db = "http://erwinzam.pythonanywhere.com/";
+   const URL_db = "https://erwinzam.pythonanywhere.com/";
 
    var nombre = document.getElementById("nombre").value;
    var descripcion = document.getElementById("descripcion").value;
