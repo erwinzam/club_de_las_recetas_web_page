@@ -8,21 +8,27 @@ let imagen_receta = document.querySelector('.recipe-image');
 let ingredientes_sel = document.querySelector('.ingredients');
 let instrucciones_sel = document.querySelector('.preparation');
 
+var fileName = window.location.pathname.split('/').pop();
+var str = fileName;
+var match = str.match(/\d/);
+var firstNumber = match ? match[0] : null;
+
 fetch('https://erwinzam.pythonanywhere.com/recetas')
     .then(response => {return response.json()})
     .then(data => {
-        console.log(data[0].URL_imagen);
+        dato_i = data[data.length - firstNumber]
+        console.log(dato_i.URL_imagen);
 
-        titulo_pagina_receta_sel.innerHTML = `El club de las recetas - ${data[0].nombre}`
+        titulo_pagina_receta_sel.innerHTML = `El club de las recetas - ${dato_i.nombre}`
         
-        titulo_receta.innerHTML =`${data[0].nombre}`;
-        categoria.innerHTML = `${data[0].categoria}`;
-        autor.innerHTML = `${data[0].autor}`;
-        imagen_receta.setAttribute("src", data[0].URL_imagen);
-        tacc.innerHTML=`${(data[0].tacc == 0)?'No':'Si'}`;
+        titulo_receta.innerHTML =`${dato_i.nombre}`;
+        categoria.innerHTML = `${dato_i.categoria}`;
+        autor.innerHTML = `${dato_i.autor}`;
+        imagen_receta.setAttribute("src", dato_i.URL_imagen);
+        tacc.innerHTML=`${(dato_i.tacc == 0)?'No':'Si'}`;
 
         // Procesamiento de la parte de los ingredientes
-        let ingredientes = (data[0].ingredientes).split('//');
+        let ingredientes = (dato_i.ingredientes).split('//');
         ingredientes_sel.innerHTML = ``;
         ingredientes.forEach((ingrediente) => {
             ingredientes_sel.innerHTML +=
@@ -32,7 +38,7 @@ fetch('https://erwinzam.pythonanywhere.com/recetas')
         });
 
         // Procesamiento de la parte de las instrucciones
-        let instrucciones = (data[0].instrucciones).split('//');
+        let instrucciones = (dato_i.instrucciones).split('//');
         instrucciones_sel.innerHTML = ``;
         instrucciones.forEach((instruccion) => {
             instrucciones_sel.innerHTML +=

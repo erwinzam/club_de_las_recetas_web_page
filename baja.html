@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El club de las recetas - Dar de baja receta</title>
+    <link rel="shortcut icon" href="img/logo/chef_hat.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/baja.css">
+    <link rel="stylesheet" href="styles/box_designs.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2a3b824eb2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+  <section class="web_page_layout">
+
+      <nav class="navegador">
+
+            <a class="logo_box" href="index.html">
+                <div class="logo">
+                    <img  src="img/logo/chef-hat.png" alt="Logo de &quot El club de las recetas &quot">
+                </div>
+                <div class="titulo_pagina">El club de las recetas</div>
+                <div class="motto"><i>Donde encontras la receta que buscas</i></div>
+            </a>
+
+            <div class="nav_tabs">
+                <a class="tab" href="index.html">
+                    <b>Inicio</b>
+                </a>
+        
+        
+                <a class="tab" href="sobre-nosotros.html">
+                    <b>Nosotros</b>
+                </a>
+        
+                <a class="tab" href="#">
+                    <b>Historias</b>
+                </a> 
+        
+                <a class="tab" href="categorias.html">
+                    <b>Categorías</b>
+                </a> 
+        
+                <a class="tab" href="busqueda.html">
+                    <b>Busqueda</b>
+                </a> 
+            </div>
+
+      </nav>
+
+      <div class="main_content">
+          <div class="middle_area">
+            <div class="formulary_section">
+              <h1>Dar de baja receta de cocina</h1>
+          
+              <form action="#" method="post" id="formulario_receta">
+                
+
+                <label for="id_receta">ID de la receta:</label>
+                <input type="text" id="id_receta" name="id_receta" required>
+            
+            
+                <input type="submit" value="Dar de baja receta de cocina" onclick="removeRecipeFromDB()">
+                <script src="js/remove_recipe_from_db.js"></script>
+              </form>
+            </div>     
+          </div>
+      </div>
+      
+
+      <footer>
+           <div class="contenedor-footer">
+              <ul class="redes-sociales">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+              <p>2023 - El club de las recetas. Todos los derechos reservados.</p>
+          </div>
+      </footer>
+      
+      
+  </section>
+
+
+</body>
+
+</html>

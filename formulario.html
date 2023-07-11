@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2a3b824eb2.js" crossorigin="anonymous"></script>
-    <script src="js/reSubi.js"></script>
 </head>
 
 <body>
@@ -61,8 +60,9 @@
           <div class="middle_area">
             <div class="formulary_section">
               <h1>Subir Receta de Cocina</h1>
+              <p>Si quieres dar de baja una receta subida, haz click <a href="baja.html" style="color: blue;">aquí.</a></p>
           
-              <form action="#" method="post">
+              <form action="#" method="post" id="formulario_receta">
                 <label for="nombre">Nombre de la receta:</label>
                 <input type="text" id="nombre" name="nombre" required>
             
@@ -98,44 +98,50 @@
                 <label for="tipo">Tipo de comida:</label>
                 <select id="tipo" name="tipo">
                   <option value="" disabled selected>Elije tipo de comida</option>
-                  <option value="comidadeverano">Comida de verano</option>
-                  <option value="comidavegana">Comida vegana</option>
-                  <option value="postres">Postres</option>
-                  <option value="aperitivos">Aperitivos</option>
-                  <option value="coctelesybebidas">Cocteles y Bebidas</option>
-                  <option value="panes">Panes</option>
-                  <option value="sopasycremas">Sopas y cremas</option>
-                  <option value="ensaladas">Ensaladas</option>
-                  <option value="verdurasylegumbres">Verduras y legumbres</option>
-                  <option value="pescadosymariscos">Pescados y mariscos</option>
-                  <option value="carnes">Carnes</option>
-                  <option value="pastas">Pastas</option>
+                  <option value="Comida de verano">Comida de verano</option>
+                  <option value="Comida vegana">Comida vegana</option>
+                  <option value="Postres">Postres</option>
+                  <option value="Aperitivos">Aperitivos</option>
+                  <option value="Cocteles y bebidas">Cocteles y Bebidas</option>
+                  <option value="Panes">Panes</option>
+                  <option value="Sopas y Cremas">Sopas y cremas</option>
+                  <option value="Ensaladas">Ensaladas</option>
+                  <option value="Verduras y legumbres">Verduras y legumbres</option>
+                  <option value="Pescados y mariscos">Pescados y mariscos</option>
+                  <option value="Carnes">Carnes</option>
+                  <option value="Pastas">Pastas</option>
                 </select>
                 <script src="js/order_categories_select_options.js"></script>
 
-                <label for="estacc">¿Contiene TACC?</label>
-                <br>
-                <input type="radio" id="es-tacc" name="estacc" value="es-tacc" checked>
-                <label for="es-tacc">Si</label>
-                <input type="radio" id="no-es-tacc" name="estacc" value="no-es-tacc">
-                <label for="no-es-tacc">No</label>
+                <div class="estacc_form">
+                    <label for="estacc">¿Contiene TACC?</label>
+                    <br>
+                    <input type="radio" id="es-tacc" name="estacc" value="es-tacc" checked>
+                    <label for="es-tacc">Si</label>
+                    <input type="radio" id="no-es-tacc" name="estacc" value="no-es-tacc">
+                    <label for="no-es-tacc">No</label>
                 <br>
 
+                </div>
             
                 <label for="imagen">URL imagen:</label>
                 <div class="URL_imagen_section">
                     <div class="URL_imagen_form">
-                        <input type="text" id="URL_imagen" name="URL_imagen" required>
+                        <input type="url" id="URL_imagen" name="URL_imagen" required>
                     </div>
                     <button type="button" onclick="previewURLImage()">Previsualizar imagen</button>
                     <script src="js/preview_URL_image.js"></script>
                 </div>
 
+                <label for="autor">Autor(opcional):</label>
+                <input type="text" id="autor" name="autor">
+
                 <label for="nombre">Email de contacto:</label>
                 <input type="text" id="email" name="email" required>
             
             
-                <input type="submit" value="Subir Receta" onclick="return subido()">
+                <input type="submit" value="Subir Receta" onclick="subido()">
+                <script src="js/reSubi.js"></script>
               </form>
             </div>     
           </div>
