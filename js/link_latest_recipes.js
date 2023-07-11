@@ -1,5 +1,5 @@
 
-const URL_db = "http://erwinzam.pythonanywhere.com/recetas";
+const URL_db = "https://erwinzam.pythonanywhere.com/recetas";
 const latest_recipes_show_number = 4;
 
 var latest_recipes_sel = document.querySelector(".latest_recipes");
