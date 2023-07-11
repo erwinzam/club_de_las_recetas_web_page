@@ -60,6 +60,10 @@ function subido(){
 
    var autor = document.getElementById("autor").value;
 
+   if(autor == ""){
+      autor = "Anonimo"
+   }
+
    var email = document.getElementById("email").value;
 
 
@@ -118,5 +122,7 @@ function subido(){
          alert('Error al agregar la receta.');
    });
 
-   return false;
+   
+   return true;
+   
 }
